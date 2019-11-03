@@ -1,17 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/layout/NavBar';
 import Dashboard from './components/layout/Dashboard';
+import Pokemon from './components/pokemon/Pokemon';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <div className="container">
-        <Dashboard />
+    <Router>
+      <div className="App">
+        <NavBar />
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/Pokemon/:pokemonIndex" component={Pokemon} />
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
