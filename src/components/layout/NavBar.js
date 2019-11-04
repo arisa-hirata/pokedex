@@ -12,8 +12,11 @@ export default class NavBar extends Component {
             className="navbar-brand col-sm-3 col-md-2 mr-0 align-items-center"
             style={{ fontWeight: 'bold', fontSize: 30 }}
           >
-            <img src={logo} style={{ width: 30, height: 30 }} />
-            &nbsp; Pokédex
+            <img
+              src={logo}
+              style={{ width: 30, height: 30, marginRight: 10 }}
+            />
+            Pokédex
           </a>
         </nav>
       </div>
