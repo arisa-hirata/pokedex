@@ -1,6 +1,9 @@
 .App {
-  padding-top: 4rem;
+  padding-top: 8rem;
   min-height: 100vh;
+  color: #363636;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
 }
 
 .navbar {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-import spinner from './spinner.gif';
+import spinner from '../../assets/spinner.gif';
 
 const Sprite = styled.img`
   width: 10em;
@@ -18,11 +18,12 @@ const Card = styled.div`
     box-shadow: 0 14px 28px rgba(50, 50, 50, 0.12),
       0 10px 10px rgba(50, 50, 50, 0.24);
   }
+  background-color: #f5f5f5;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: #363636;
   &:focus,
   &:hover,
   &:visited,
@@ -43,14 +44,12 @@ export default class PokemonCard extends Component {
 
   componentDidMount() {
     const { name, url } = this.props;
+
     const pokemonIndex = url.split('/')[url.split('/').length - 2];
+    //const imageUrl = `./sprites/pokemon/${pokemonIndex}.png`;
     const imageUrl = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/${pokemonIndex}.png?raw=true`;
 
-    this.setState({
-      name,
-      imageUrl,
-      pokemonIndex
-    });
+    this.setState({ name, imageUrl, pokemonIndex });
   }
 
   render() {
@@ -58,7 +57,6 @@ export default class PokemonCard extends Component {
       <div className="col-md-3 col-sm-6 mb-5">
         <StyledLink to={`pokemon/${this.state.pokemonIndex}`}>
           <Card className="card">
-            <h5 classNam="card-header">{this.state.pokemonIndex}</h5>
             {this.state.imageLoading ? (
               <img
                 src={spinner}
@@ -71,7 +69,6 @@ export default class PokemonCard extends Component {
               src={this.state.imageUrl}
               onLoad={() => this.setState({ imageLoading: false })}
               onError={() => this.setState({ toManyRequests: true })}
-              src={this.state.imageUrl}
               style={
                 this.state.toManyRequests
                   ? { display: 'none' }
@@ -82,20 +79,23 @@ export default class PokemonCard extends Component {
             />
             {this.state.toManyRequests ? (
               <h6 className="mx-auto">
-                <span className="badge badge-danger mt-2">To many Request</span>
+                <span className="badge badge-danger mt-2">
+                  To Many Requests
+                </span>
               </h6>
             ) : null}
-            <div className="card-body mx-auto">
-              <h6 className="card-title">
+            <div
+              className="card-footer text-center"
+              style={{ backgroundColor: 'white' }}
+            >
+              <h5 style={{ fontWeight: 400 }}># {this.state.pokemonIndex}</h5>
+              <h3 style={{ fontWeight: 'bold' }}>
                 {this.state.name
                   .toLowerCase()
                   .split(' ')
-                  .map(
-                    letter =>
-                      letter.charAt(0).toUpperCase() + letter.substring(1)
-                  )
+                  .map(s => s.charAt(0).toUpperCase() + s.substring(1))
                   .join(' ')}
-              </h6>
+              </h3>
             </div>
           </Card>
         </StyledLink>

@@ -202,7 +202,7 @@ export default class Pokemon extends Component {
                 <h5># {this.state.pokemonIndex}</h5>
               </div>
               <div className="col-5">
-                <h3>
+                <h3 style={{ fontWeight: 'bold' }}>
                   {this.state.name
                     .toLowerCase()
                     .split(' ')
@@ -242,13 +242,6 @@ export default class Pokemon extends Component {
                 />
               </div>
               <div className="col-md-9">
-                {/* <h4 className="mx-auto">
-                  {this.state.name
-                    .toLowerCase()
-                    .split(' ')
-                    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-                    .join(' ')}
-                </h4> */}
                 <div className="row align-items-center">
                   <div className={`col-12 col-md-${this.state.statTitleWidth}`}>
                     HP
@@ -391,12 +384,17 @@ export default class Pokemon extends Component {
           </div>
           <hr />
           <div className="card-body">
-            <h5 class="card-title text-center">Profile</h5>
+            <h5
+              className="card-title text-center"
+              style={{ fontWeight: 'bold' }}
+            >
+              Profile
+            </h5>
             <div className="row">
               <div className="col-md-6">
                 <div className="row">
                   <div className="col-6">
-                    <h6 className="float-right">Height:</h6>
+                    <div className="float-right">Height:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">
@@ -404,7 +402,7 @@ export default class Pokemon extends Component {
                     </h6>
                   </div>
                   <div className="col-6">
-                    <h6 className="float-right">Weight:</h6>
+                    <div className="float-right">Weight:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">
@@ -412,13 +410,13 @@ export default class Pokemon extends Component {
                     </h6>
                   </div>
                   <div className="col-6">
-                    <h6 className="float-right">Catch Rate:</h6>
+                    <div className="float-right">Catch Rate:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">{this.state.catchRate}%</h6>
                   </div>
                   <div className="col-6">
-                    <h6 className="float-right">Gender Ratio:</h6>
+                    <div className="float-right">Gender Ratio:</div>
                   </div>
                   <div className="col-6">
                     <div class="progress">
@@ -455,25 +453,25 @@ export default class Pokemon extends Component {
               <div className="col-md-6">
                 <div className="row">
                   <div className="col-6">
-                    <h6 className="float-right">Egg Groups:</h6>
+                    <div className="float-right">Egg Groups:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">{this.state.eggGroups} </h6>
                   </div>
                   <div className="col-6">
-                    <h6 className="float-right">Hatch Steps:</h6>
+                    <div className="float-right">Hatch Steps:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">{this.state.hatchSteps}</h6>
                   </div>
                   <div className="col-6">
-                    <h6 className="float-right">Abilities:</h6>
+                    <div className="float-right">Abilities:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">{this.state.abilities}</h6>
                   </div>
                   <div className="col-6">
-                    <h6 className="float-right">EVs:</h6>
+                    <div className="float-right">EVs:</div>
                   </div>
                   <div className="col-6">
                     <h6 className="float-left">{this.state.evs}</h6>
