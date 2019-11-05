@@ -14,9 +14,9 @@ function App() {
       <div className="App">
         <NavBar />
         <div className="container">
-          <SearchBar />
+          {/* <SearchBar /> */}
           <Switch>
-            <PokeCalls />
+            {/* <PokeCalls /> */}
             <Route exact path="/" component={Dashboard} />
             <Route exact path="/Pokemon/:pokemonIndex" component={Pokemon} />
           </Switch>
