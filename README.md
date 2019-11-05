@@ -1,7 +1,7 @@
 # Pokédex
 Ash, the hero of the "Pokémon" animated series, has finally become a Pokémon Master after 22 years.
-So you can be a Pokémon master like Ash unless you never give up to be it.
-This is a Pokédex developed by React, now you can start your adventure as a Pokémon Trainer with this app!
+So you can be a Pokémon master like Ash unless you never give up to be a Pokémon Master.
+This is a Pokédex developed by React. Now you can start your adventure as a Pokémon Trainer with this app!
 
 [DEMO](https://react-pokedex-v1.netlify.com/)
 
