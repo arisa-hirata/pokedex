@@ -7,7 +7,7 @@ This is a Pokédex developed by React. Now you can start your adventure as a Pok
 
 ![Screen (1)](https://user-images.githubusercontent.com/32582917/68179214-d69cc200-ff43-11e9-95aa-26d85a192613.gif)
 
-*** This is under construction. Final version is coming soon!
+_*** This is under construction. Final version is coming soon!_
 
 ## Specifications
 - Create React App
